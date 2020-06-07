@@ -17,7 +17,6 @@ export default (props) => {
     height: '36px',
     lineHeight: '30px',
     fontSize: '15px',
-    lineHeight: '15px'
   };
 
   const onChange = e => {
