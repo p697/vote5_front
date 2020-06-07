@@ -7,9 +7,11 @@ html, body, #root {
   margin: 0;
   width: 100%;
   height: 100%;
+  /* position: absolute; */
 }
 
 .app {
+  /* position: absolute; */
   width: 100%;
   max-width: 414px;
   height: 100%;
@@ -17,6 +19,11 @@ html, body, #root {
   margin: auto;
 }
 
+/* 万恶之源 */
+*, *::before, *::after {
+  -webkit-box-sizing: content-box; 
+  box-sizing: content-box;
+}
 
 
 

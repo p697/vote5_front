@@ -16,6 +16,8 @@ export default (props) => {
     display: 'block',
     height: '36px',
     lineHeight: '30px',
+    fontSize: '15px',
+    lineHeight: '15px'
   };
 
   const onChange = e => {
@@ -46,7 +48,9 @@ export default (props) => {
   }
 
   return (
-    <Card title={title} bordered={false} size="small" className="normal_choice_box" headStyle={{ fontSize: "16px" }} >
+    <Card title={title} bordered={false} size="small" className="normal_choice_box" 
+      headStyle={{ fontSize: "16px" }} 
+    >
       <ChoicesCom />
     </Card>
   );
