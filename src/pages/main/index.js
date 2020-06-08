@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Card } from 'antd'
 import { Button, Toast } from 'antd-mobile'
-import {withRouter} from "react-router-dom"
+import { withRouter } from "react-router-dom"
 import NormalChoiceBox from './coms/normal_choice_box/normal_choice_box'
 import RowChoiceBox from './coms/row_choice_box/row_choice_box'
 import { AppContext } from '../../index'
@@ -44,7 +44,12 @@ const Main = (props) => {
   return (
     <div className="main">
       <div className="main-header">
-        疫情影响因素调查表
+        <div className="main-header-title">
+          疫情影响因素调查表
+        </div>
+        <div className="main-header-desc">
+          您好!我们是合肥工业大学管理学院的学生，为了解社会群众对疫情影响因素的认知情况，我们进行了本次调研。本次调研完全以匿名的形式进行，我们保证对您提供的答案绝对保密。请您根据实际情况客观如实填写，非常感谢您的支持!
+        </div>
       </div>
       <div className="main-content">
         <NormalChoiceBox
@@ -55,7 +60,7 @@ const Main = (props) => {
         <NormalChoiceBox
           id="50002"
           title="您的学历"
-          choices={["小学、初中", "高中、职高", "专科生", "本科生", "研究所（硕士、博士）"]}
+          choices={["小学、初中", "高中、职高", "专科生", "本科生", "研究生（硕士、博士）"]}
         />
         <NormalChoiceBox
           id="50003"
