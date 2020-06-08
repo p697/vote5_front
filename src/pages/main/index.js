@@ -16,16 +16,26 @@ const Main = (props) => {
   const [showList, setShowList] = useState([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
   const idList = ["50001", "50002", "50003", "50401", "50402", "50403", "50404", "50405", "50406", "50407", "50408", "50409", "50410",
     "50411", "50412", "50413", "50414", "50415", "50416", "50417", "50418", "50419", "50420", "50421", "50422", "50423", "50424"]
+  const needId = [{
+    id: "50001",
+    msg: "请填写性别！"
+  }, {
+    id: "50002",
+    msg: "请填写学历！"
+  }, {
+    id: "50003",
+    msg: "请填写职业！"
+  }]
 
   const handleSubmit = () => {
 
-    let isLegael = checkSubmit(idList, app.context.answers, 14)
+    let isLegael = checkSubmit(idList, app.context.answers, 14, needId)
     if (isLegael) {
       setBtnDisabled(true)
       Toast.loading("提交ing", 3000)
       submit(idList, app.context).then(res => {
-        console.log(res)
         Toast.success("提交成功", 1)
+        app.setContext({ answers: {} })
         setTimeout(() => {
           props.history.push("/finish");
         }, 1000);
